@@ -4,13 +4,16 @@ var defaultEnvConfig = require('./default');
 
 module.exports = {
   db: {
+    //uri: 'mongodb://nvpcoodes:sankofa123>@ds059524.mongolab.com:59524/mean-nvpcodes',
     uri: process.env.MONGOHQ_URL || process.env.MONGOLAB_URI || 'mongodb://' + (process.env.DB_1_PORT_27017_TCP_ADDR || 'localhost') + '/mean-nvpcodes',
     options: {
-      user: '',
-      pass: ''
+     // user: 'nvpcodes',
+      user :'',
+     // pass: 'sankofa123'
+     pass: ''
     },
     // Enable mongoose debug mode
-    debug: process.env.MONGODB_DEBUG || false
+    debug: process.env.MONGODB_DEBUG || true
   },
   log: {
     // logging with Morgan - https://github.com/expressjs/morgan
